@@ -6,13 +6,13 @@
 }
 
 /*##########
-### HEADER ###
-############*/
+## HEADER ##
+##########*/
 
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 3rem 1rem;
 }
 
 nav > button {
@@ -30,12 +30,20 @@ nav > input {
   margin-top: 0.5rem;
 }
 
-/*##########################
-### MAIN Primera Seccion ###
-############################*/
+/*########################
+## MAIN Primera Seccion ##
+########################*/
 
 main {
   margin: 0 1rem;
+}
+
+main > section h6 {
+  color: blue;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: lighter;
 }
 
 main > section:first-child > h1 {
@@ -62,18 +70,21 @@ main > section:first-child > nav > button:first-child {
   color: white;
   font-weight: bold;
   padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
 }
 main > section:first-child > nav > button {
   border: 0.2rem solid blue;
   font-weight: bold;
   padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  margin-top: 0.1rem;
 }
 
-/*##########################
-### MAIN 2da Seccion ###
-############################*/
+/*####################
+## MAIN 2da Seccion ##
+####################*/
 
-section > ul {
+main > section:nth-child(2) > ul {
   display: flex;
   flex-direction: column;
   margin: 4rem 0;
@@ -84,20 +95,20 @@ section > ul {
   padding-top: 1.5rem;
 }
 
-section > ul li {
+main > section:nth-child(2) ul li {
   margin-bottom: 0.5rem;
 }
 
-li::before {
+main > section:nth-child(2) li::before {
   content: '•';
   padding-right: 8px;
   color: blue;
   font-size: 1.5rem;
 }
 
-/*##########################
-### MAIN 3ra Seccion ###
-############################*/
+/*####################
+## MAIN 3ra Seccion ##
+####################*/
 
 main > section:nth-child(3) {
   margin-left: 0.6rem;
@@ -106,12 +117,6 @@ main > section:nth-child(3) {
 main > section:nth-child(3) > img {
   width: 19rem;
   height: 26.5rem;
-}
-
-main > section:nth-child(3) > h6 {
-  color: blue;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 
 main > section:nth-child(3) > h2 {
@@ -138,6 +143,7 @@ main > section:nth-child(3) > div p span {
 main > section:nth-child(3) > section {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 2rem;
 }
 
 main > section:nth-child(3) > section > button:first-child {
@@ -147,6 +153,7 @@ main > section:nth-child(3) > section > button:first-child {
   font-weight: bold;
   padding: 0.5rem 1rem;
   margin-right: 0.2rem;
+  border-radius: 0.3rem;
 }
 
 main > section:nth-child(3) > section > button:last-child {
@@ -154,11 +161,254 @@ main > section:nth-child(3) > section > button:last-child {
   font-weight: bold;
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
+  border-radius: 0.3rem;
 }
 
-/*##########################
-### GALERIA ###
-############################*/
-main > section:nth-child(3) li {
+main > section:nth-child(3) {
+  border-bottom: 0.1rem solid rgb(182, 182, 182);
+}
+
+/*###########
+## GALERIA ##
+###########*/
+
+main > section:nth-child(4) {
+  margin-left: 0.6rem;
+  border-bottom: 0.1rem solid rgb(182, 182, 182);
+}
+
+main > section:nth-child(4) li {
   list-style: none;
+}
+
+main > section:nth-child(4) li > h2 {
+  font-size: 2.5rem;
+  margin: 3rem 0;
+}
+
+main > section:nth-child(4) img {
+  width: 19rem;
+  height: 26.5rem;
+}
+
+main > section:nth-child(4) p {
+  font-weight: bold;
+  color: grey;
+  margin: 2rem 0;
+}
+
+main > section:nth-child(4) button:nth-child(5) {
+  border: 0.2rem solid blue;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-right: 0.2rem;
+  border-radius: 0.3rem;
+}
+
+main > section:nth-child(4) button:last-child {
+  border: 0.2rem solid rgb(182, 182, 182);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-bottom: 4rem;
+  border-radius: 0.3rem;
+}
+
+/*###########
+## PLANES ###
+###########*/
+
+main > section:nth-child(5) {
+  margin: 4rem 0 0 0;
+}
+
+main > section:nth-child(5) div:first-child {
+  background-color: blue;
+}
+
+main > section:nth-child(5) div:last-child {
+  background-color: black;
+}
+
+main > section:nth-child(5) div {
+  width: 100%;
+  color: white;
+}
+
+main > section:nth-child(5) div h2 {
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  margin-left: 1.5rem;
+}
+
+main > section:nth-child(5) div p {
+  font-size: 1.2rem;
+  margin: 2rem 1.5rem;
+}
+
+main > section:nth-child(5) div h5 {
+  font-size: 1.6rem;
+  margin: 2rem 1.5rem;
+}
+
+main > section:nth-child(5) div li::before {
+  content: '•';
+  color: white;
+  font-size: 1.5rem;
+  margin: 2rem 1.5rem;
+}
+
+main > section:nth-child(5) div nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+main > section:nth-child(5) > div:first-child nav > button:first-child {
+  border: none;
+  background-color: white;
+  color: blue;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  margin: 2rem 0 0.8rem 0;
+  border-radius: 0.3rem;
+}
+
+main > section:nth-child(5) div:first-child nav > button:last-child {
+  border: 0.15rem solid white;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  margin-right: 0.2rem;
+  margin-bottom: 4rem;
+  border-radius: 0.3rem;
+}
+
+main > section:nth-child(5) > div:last-child nav > button:first-child {
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  margin: 2rem 0 0.8rem 0;
+  border-radius: 0.3rem;
+}
+
+main > section:nth-child(5) div:last-child nav > button:last-child {
+  border: 0.15rem solid white;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  margin-right: 0.2rem;
+  margin-bottom: 4rem;
+  border-radius: 0.3rem;
+}
+
+/*###################
+## NOTICIAS Header ##
+###################*/
+
+main > section:nth-child(6) > header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+main > section:nth-child(6) > header > h2 {
+  font-size: 2.3rem;
+}
+
+main > section:nth-child(6) > header > button {
+  margin-top: 1rem;
+  width: 9rem;
+  padding: 0.6rem 1rem;
+  font-size: large;
+  font-weight: bold;
+  background-color: white;
+  border: 0.1rem solid rgb(190, 190, 190);
+  border-radius: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+main > section:nth-child(6) > header > button > span {
+  color: blue;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  font-size: x-large;
+}
+
+/*#################
+## NOTICIAS Divs ##
+#################*/
+
+main > section:nth-child(6) div img {
+  width: 100%;
+  height: 100%;
+}
+
+main > section:nth-child(6) > div > a {
+  color: black;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+main > section:nth-child(6) > div > p {
+  font-weight: bold;
+  color: grey;
+  margin: 2rem 0 5rem 0;
+  font-size: large;
+  text-decoration: none;
+}
+
+/*#####################
+## MAIN Ultima parte ##
+#####################*/
+
+main > section:nth-child(7) {
+  background-color: rgb(242, 246, 248);
+}
+
+main > section:nth-child(7) > h2 {
+  padding: 3rem 0 3rem 0;
+  margin-left: 1rem;
+}
+
+main > section:nth-child(7) > p {
+  color: grey;
+  margin: 0 1rem 0 1rem;
+}
+
+main > section:nth-child(7) > button {
+  margin: 3rem 1rem;
+  width: 9rem;
+  padding: 0.6rem 1rem;
+  font-size: large;
+  font-weight: bold;
+  background-color: white;
+  border: 0.1rem solid rgb(190, 190, 190);
+  border-radius: 0.3rem;
+}
+
+/*##########
+## FOOTER ##
+##########*/
+
+footer {
+  display: flex;
+  align-items: center;
+  background-color: rgb(242, 246, 248);
+  margin-top: 1rem;
+  padding: 1rem 1rem;
+}
+
+footer > figure > img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.8rem;
+}
+footer > p {
+  color: grey;
 }

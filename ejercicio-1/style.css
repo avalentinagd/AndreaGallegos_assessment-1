@@ -1,3 +1,5 @@
+/*### PARA MOVIL ###*/
+
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +16,10 @@ body {
 }
 
 body > header > nav {
+  width: 93%;
   position: fixed;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0rem 1rem 3rem 1rem;
   background-color: white;
 }
@@ -30,12 +33,10 @@ header > nav > button {
 header > nav > figure > img {
   width: 4rem;
   height: 4rem;
-  margin-left: 5.5rem;
 }
 
 header > nav > input {
   margin-top: 0.5rem;
-  margin-left: 5.5rem;
   float: right;
 }
 
@@ -191,7 +192,7 @@ main > section:nth-child(4) li {
   list-style: none;
 }
 
-main > section:nth-child(4) li > h2 {
+main > section:nth-child(4) > h2 {
   font-size: 2.5rem;
   margin: 3rem 0;
 }
@@ -281,7 +282,7 @@ main > section:nth-child(5) > div:first-child nav > button:first-child {
   color: blue;
   font-weight: bold;
   padding: 0.7rem 1rem;
-  margin: 2rem 0 0.8rem 0;
+  margin: 2rem 0 0.8rem 1.5rem;
   border-radius: 0.3rem;
 }
 
@@ -291,7 +292,7 @@ main > section:nth-child(5) div:first-child nav > button:last-child {
   color: white;
   font-weight: bold;
   padding: 0.7rem 1rem;
-  margin-right: 0.2rem;
+  margin-left: 1.5rem;
   margin-bottom: 4rem;
   border-radius: 0.3rem;
 }
@@ -302,7 +303,7 @@ main > section:nth-child(5) > div:last-child nav > button:first-child {
   color: black;
   font-weight: bold;
   padding: 0.7rem 1rem;
-  margin: 2rem 0 0.8rem 0;
+  margin: 2rem 0 0.8rem 1.5rem;
   border-radius: 0.3rem;
 }
 
@@ -312,7 +313,7 @@ main > section:nth-child(5) div:last-child nav > button:last-child {
   color: white;
   font-weight: bold;
   padding: 0.7rem 1rem;
-  margin-right: 0.2rem;
+  margin-left: 1.5rem;
   margin-bottom: 4rem;
   border-radius: 0.3rem;
 }
@@ -421,4 +422,96 @@ footer > figure > img {
 }
 footer > p {
   color: grey;
+}
+
+/*### PARA TABLET ###*/
+@media (min-width: 741px) {
+  body > header > nav {
+    width: 100%;
+    padding: 3rem;
+  }
+
+  header > nav > button {
+    font-size: xx-large;
+  }
+
+  header > nav > figure > img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  header > nav > input {
+    margin-top: 0;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  main > section:first-child > h1 {
+    font-size: 5rem;
+    margin-top: 14rem;
+  }
+
+  main > section:first-child > p {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  main > section:first-child > nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  main > section:first-child > nav > button {
+    margin-left: 1rem;
+  }
+
+  main > section:nth-child(2) > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  main > section:nth-child(3) > img {
+    float: left;
+    margin-right: 2rem;
+    width: 13rem;
+    height: 20rem;
+  }
+
+  main > section:nth-child(4) > ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main > section:nth-child(4) li {
+    width: 40%;
+    margin-left: 3.5rem;
+  }
+
+  main > section:nth-child(4) img {
+    width: 16rem;
+    height: 23.5rem;
+  }
+
+  main > section:nth-child(4) p {
+    width: 70%;
+  }
+
+  main > section:nth-child(5) {
+    display: flex;
+  }
+
+  main > section:nth-child(5) div {
+    width: 45%;
+    color: white;
+    margin: 1rem;
+  }
+  main > section:nth-child(7) > h2 {
+    font-size: xx-large;
+  }
+
+  main > section:nth-child(7) > p {
+    font-size: 1.3rem;
+  }
 }

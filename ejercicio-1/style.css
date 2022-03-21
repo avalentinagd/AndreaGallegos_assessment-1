@@ -24,20 +24,31 @@ body > header > nav {
   background-color: white;
 }
 
+body > header > nav > div {
+  display: none;
+}
+
 header > nav > button {
   background-color: transparent;
   border: none;
   font-size: large;
 }
 
-header > nav > figure > img {
+header > nav > figure > img:first-child {
   width: 4rem;
   height: 4rem;
 }
+header > nav > figure > img:last-child {
+  display: none;
+}
 
-header > nav > input {
+header > nav > section > input {
   margin-top: 0.5rem;
   float: right;
+}
+
+header > nav > section button {
+  display: none;
 }
 
 /*########################
@@ -89,6 +100,7 @@ main > section:first-child > nav > button {
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
   margin-top: 0.1rem;
+  color: blue;
 }
 
 /*####################
@@ -360,13 +372,13 @@ main > section:nth-child(6) div img {
   height: 100%;
 }
 
-main > section:nth-child(6) > div > a {
+main > section:nth-child(6) div > a {
   color: black;
   font-size: x-large;
   text-decoration: none;
 }
 
-main > section:nth-child(6) > div > p {
+main > section:nth-child(6) div > p {
   font-weight: bold;
   color: grey;
   margin: 2rem 0 5rem 0;
@@ -390,6 +402,8 @@ main > section:nth-child(7) > h2 {
 main > section:nth-child(7) > p {
   color: grey;
   margin: 0 1rem 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 main > section:nth-child(7) > button {
@@ -424,36 +438,43 @@ footer > p {
   color: grey;
 }
 
+footer ul {
+  display: none;
+}
+
 /*### PARA TABLET ###*/
 @media (min-width: 741px) {
   body > header > nav {
-    width: 100%;
-    padding: 3rem;
+    width: 102%;
+    padding: 2rem;
+    margin-left: 0;
   }
 
   header > nav > button {
     font-size: xx-large;
   }
 
-  header > nav > figure > img {
+  header > nav > figure > img:first-child {
     width: 6rem;
     height: 6rem;
   }
 
-  header > nav > input {
+  header > nav > section > input {
     margin-top: 0;
-    width: 6rem;
-    height: 6rem;
+    width: 5.6rem;
+    height: 5.6rem;
   }
 
   main > section:first-child > h1 {
     font-size: 5rem;
     margin-top: 14rem;
+    margin-left: 0.7rem;
   }
 
   main > section:first-child > p {
     font-weight: bold;
     font-size: large;
+    margin-left: 1rem;
   }
 
   main > section:first-child > nav {
@@ -469,7 +490,13 @@ footer > p {
   main > section:nth-child(2) > ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+  }
+
+  main > section:nth-child(3) {
+    margin: 0 1rem;
   }
 
   main > section:nth-child(3) > img {
@@ -495,7 +522,7 @@ footer > p {
   }
 
   main > section:nth-child(4) p {
-    width: 70%;
+    width: 80%;
   }
 
   main > section:nth-child(5) {
@@ -513,5 +540,286 @@ footer > p {
 
   main > section:nth-child(7) > p {
     font-size: 1.3rem;
+  }
+
+  main > section:nth-child(6) > section div {
+    width: 40%;
+    height: 40%;
+    margin-left: 2.8rem;
+    margin-right: 1rem;
+  }
+
+  main > section:nth-child(6) > section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main > section:nth-child(7) > h2 {
+    font-size: 2.1rem;
+    line-height: 1.5;
+  }
+}
+
+/*### PARA ORDENADOR ###*/
+@media (min-width: 1025px) {
+  header > nav > button,
+  header > nav > figure > img:first-child {
+    display: none;
+  }
+
+  header > nav > figure > img:last-child {
+    display: block;
+    margin-left: 10rem;
+  }
+
+  header > nav > section input {
+    margin-right: 10rem;
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  header > nav > section {
+    display: flex;
+    align-items: center;
+  }
+
+  header > nav > section button {
+    display: block;
+    padding: 0 1rem;
+    height: 2.7rem;
+    margin-left: 0.5rem;
+    font-size: larger;
+  }
+
+  header > nav > section button:first-child {
+    border: none;
+    color: grey;
+    background-color: transparent;
+  }
+
+  header > nav > section button:nth-child(2) {
+    border-radius: 0.2rem;
+    border-color: blue;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+  }
+
+  body > header > nav > div {
+    display: block;
+  }
+
+  body > header > nav > div > ul {
+    display: flex;
+    list-style: none;
+  }
+
+  body > header > nav > div > ul > li {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: grey;
+    font-size: larger;
+    text-decoration: none;
+  }
+
+  body > header > nav > div > ul > li > a {
+    text-decoration: none;
+    color: grey;
+  }
+
+  body > header > nav > div > ul > li > a:hover {
+    text-decoration: 0.2rem blue solid underline;
+    color: black;
+  }
+
+  main {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  main > section:first-child {
+    margin-bottom: 5rem;
+  }
+
+  main > section:first-child > h1 {
+    font-size: 5.4rem;
+  }
+
+  main > section:first-child > p {
+    font-weight: lighter;
+    font-size: 1.32rem;
+    line-height: 0.2;
+  }
+
+  main > section:first-child > nav > button:first-child {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 0.2rem;
+  }
+
+  main > section:first-child > nav > button {
+    border: 0.15rem solid blue;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    color: blue;
+    padding: 0.7rem 1.3rem;
+    border-radius: 0.2rem;
+  }
+
+  main > section:nth-child(2) ul li {
+    font-size: 1.3rem;
+    padding: 0.5rem 0.3rem;
+  }
+
+  main > section:nth-child(2) li::before {
+    font-size: 1.7rem;
+  }
+
+  main > section:nth-child(3) {
+    margin-top: 7rem;
+  }
+
+  main > section:nth-child(3) > img {
+    width: 25rem;
+    height: 35rem;
+    margin-left: 1.5rem;
+  }
+
+  main > section:nth-child(3) > h6,
+  main > section:nth-child(3) > h2,
+  main > section:nth-child(3) > p,
+  main > section:nth-child(3) > div,
+  main > section:nth-child(3) > section {
+    margin-left: 38rem;
+  }
+
+  main > section:nth-child(3) > h6 {
+    font-size: 1.26rem;
+    margin-bottom: 3rem;
+  }
+
+  main > section:nth-child(3) p {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    width: 40rem;
+    margin-bottom: 3rem;
+  }
+  main > section:nth-child(3) > div > p > span {
+    font-weight: lighter;
+  }
+
+  main > section:nth-child(3) > section {
+    margin-top: 3rem;
+    margin-bottom: 15rem;
+  }
+
+  main > section:nth-child(3) > section > button:first-child {
+    font-size: large;
+    padding: 0.7rem 1.2rem;
+    margin-right: 0.3rem;
+    font-weight: lighter;
+  }
+
+  main > section:nth-child(3) > section > button:last-child {
+    font-size: large;
+    border: 0.15rem solid rgb(182, 182, 182);
+    font-weight: lighter;
+    padding: 0.7rem 1.2rem;
+    background-color: transparent;
+  }
+
+  main > section:nth-child(4) > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  main > section:nth-child(4) > ul > li {
+    width: 17;
+  }
+
+  main > section:nth-child(4) img {
+    width: 15rem;
+    height: 22.5rem;
+  }
+
+  main > section:nth-child(4) p {
+    font-weight: lighter;
+    width: 17rem;
+    line-height: 1.8;
+  }
+
+  main > section:nth-child(4) h3 {
+    font-size: x-large;
+  }
+
+  main > section:nth-child(4) button:nth-child(5) {
+    font-size: large;
+    padding: 0.7rem 1.2rem;
+    margin-right: 0.3rem;
+    font-weight: lighter;
+  }
+
+  main > section:nth-child(4) button:last-child {
+    font-size: large;
+    border: 0.15rem solid rgb(182, 182, 182);
+    font-weight: lighter;
+    padding: 0.7rem 1.2rem;
+    background-color: transparent;
+  }
+
+  main > section:nth-child(6) {
+    border-top: 0.1rem solid rgb(182, 182, 182);
+    margin-top: 5rem;
+  }
+
+  main > section:nth-child(6) > header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  main > section:nth-child(6) > header > h2 {
+    margin-top: 2rem;
+  }
+
+  main > section:nth-child(6) > div > img {
+    width: 25rem;
+    height: 33rem;
+  }
+
+  main > section:nth-child(6) > section {
+    float: right;
+  }
+
+  main > section:nth-child(6) div img {
+    width: 50%;
+    height: 50%;
+  }
+
+  main > section:nth-child(6) div a h3 {
+    width: 25rem;
+  }
+
+  main > section:nth-child(7) h2 {
+    width: 40rem;
+    font-size: 2.7rem;
+    line-height: 1.2;
+  }
+  main > section:nth-child(7) p {
+    width: 45rem;
+    float: right;
+  }
+
+  footer {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  footer > p {
+    font-size: large;
   }
 }
